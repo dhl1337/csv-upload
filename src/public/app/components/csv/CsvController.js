@@ -4,12 +4,12 @@
         .module('csvUpload')
         .controller('CsvController', ['csvService', CsvController]);
 
-    function CsvController (csvService) {
+    function CsvController(csvService) {
 
         const VM = this;
 
         let getUsers = () => {
-            csvService.getUsers.then( users => {
+            csvService.getUsers.then(users => {
                 VM.users = users;
             })
         };
@@ -24,16 +24,14 @@
                 complete(results) {
                     let result = results;
                     let users = result.data;
-                    users.forEach( user => {
+                    users.forEach(user => {
                         var obj = {
-                            'lastName': user[0],
-                            'firstName': user[1],
+                            'firstName': user[0],
+                            'lastName': user[1],
                             'email': user[2],
-                            'speciality': user[3],
-                            'site': user[4],
-                            'phoneNumber': user[5]
+                            'phoneNumber': user[3]
                         };
-                        csvService.addUser(obj).then( data => {
+                        csvService.addUser(obj).then(data => {
                             console.log(data);
                         })
                     });
@@ -45,8 +43,5 @@
             $("#csv-file").change(handleFileSelect);
         });
 
-
-
     }
-
 })();
