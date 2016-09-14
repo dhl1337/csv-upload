@@ -13,10 +13,10 @@ let port = config.port;
 let app = express();
 
 // Database
-mongoose.connect(config.database.url);
-mongoose.connection.once('open', () => {
-    console.log('Successfully connected to mongodb')
-});
+// mongoose.connect(config.database.url);
+// mongoose.connection.once('open', () => {
+//     console.log('Successfully connected to mongodb')
+// });
 
 // Express Middleware
 app.use(expressSession(config.session));

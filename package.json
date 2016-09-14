@@ -1,32 +1,34 @@
 {
-  "name": "csv-upload",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dhl1337/csv-upload.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/dhl1337/csv-upload/issues"
-  },
-  "homepage": "https://github.com/dhl1337/csv-upload#readme",
-  "dependencies": {
-    "body-parser": "^1.15.2",
-    "express": "^4.14.0",
-    "express-session": "^1.14.1",
-    "mongoose": "^4.6.0"
-  },
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-babel": "^6.1.2",
-    "gulp-concat": "^2.6.0",
-    "gulp-uglify": "^2.0.0"
-  }
+    "name": "csv-upload",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "run": "build/server/index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dhl1337/csv-upload.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/dhl1337/csv-upload/issues"
+    },
+    "homepage": "https://github.com/dhl1337/csv-upload#readme",
+    "dependencies": {
+        "body-parser": "^1.15.2",
+        "express": "^4.14.0",
+        "express-session": "^1.14.1",
+        "mongoose": "^4.6.0"
+    },
+    "devDependencies": {
+        "babel-preset-es2015": "^6.14.0",
+        "gulp": "^3.9.1",
+        "gulp-babel": "^6.1.2",
+        "gulp-concat": "^2.6.0",
+        "gulp-uglify": "^2.0.0"
+    }
 }
