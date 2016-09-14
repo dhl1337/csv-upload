@@ -6,6 +6,16 @@
 
     function CsvController (csvService) {
 
+        const VM = this;
+
+        let getUsers = () => {
+            csvService.getUsers.then( users => {
+                VM.users = users;
+            })
+        };
+
+        getUsers();
+
         let handleFileSelect = (evt) => {
             let file = evt.target.files[0];
             Papa.parse(file, {
@@ -14,7 +24,7 @@
                 complete(results) {
                     let result = results;
                     let users = result.data;
-                    users.forEach((user) => {
+                    users.forEach( user => {
                         var obj = {
                             'lastName': user[0],
                             'firstName': user[1],
@@ -23,7 +33,7 @@
                             'site': user[4],
                             'phoneNumber': user[5]
                         };
-                        csvService.addUser(obj).then((data) => {
+                        csvService.addUser(obj).then( data => {
                             console.log(data);
                         })
                     });
